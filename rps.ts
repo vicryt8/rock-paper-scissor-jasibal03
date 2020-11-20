@@ -17,7 +17,7 @@ var resultArray = [
 ];
 
 //                             RESULT ARRAY
-//      **win = 1.1, draw = 0.2, lose =0, user(rows) v computer (columns)**
+//      **win = 1.1, draw = 0.#, lose =0.#, user(rows) v computer (columns)**
 //      **integral= value added to win count, decimal=resultMsgIndex**
 //
 //                 <------------(Computer)------------>
@@ -43,7 +43,7 @@ function validateThrow(s1: string): number {
   return invalidInputError;
 }
 
-function getResultIndex(n1: number): number {
+function getResultMsgIndex(n1: number): number {
   var s2 = n1.toString();
   s2 = s2.substr(s2.length - 1);
   return parseInt(s2);
@@ -66,7 +66,7 @@ for (var i = 1; i < 11 ; i++) {
 
   if (playerThrowIndex !== 3) {
     var result = resultArray[playerThrowIndex][computerThrowIndex];
-    var resultMsgIndex = getResultIndex(result);
+    var resultMsgIndex = getResultMsgIndex(result);
     win = win + Math.floor(result);
     draw = draw + addDraw(resultMsgIndex);
     alert(
