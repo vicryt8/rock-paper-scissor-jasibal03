@@ -71,7 +71,7 @@ for (var i = 1; i < 11 ; i++) {
     draw = draw + addDraw(resultMsgIndex);
     alert(
       "Game " +
-        (i - 1) +
+        i +
         "\n" +
         "You threw: " +
         selection[playerThrowIndex][0] +
