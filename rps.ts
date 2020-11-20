@@ -4,12 +4,16 @@ var selection = [
   ["scissor", "scissors", "チョキ", "ciseaux", "scisor"], //scissor:2
 ];
 
-var resultMsgArray = ["You Lose :(", "You Win :D", "It's a Draw :/"];
+var resultMsgArray =[
+  "Rock on! It's a draw","Save the trees! It's a draw","Don'run with Scissors! It's a draw",
+  "Computers are just rocks anyways. You Lose!", "Don't feel to cut up about it. You Lose!", "Don't get bent. You Lose!",
+  "Rock and Roll Baby. You Win!","Trees>Rocks! You Win!","Confetti! You Win!"
+];
 
 var resultArray = [
-  [0.2, 0, 1],
-  [1, 0.2, 0],
-  [0, 1, 0.2],
+  [0.0, 0.3, 1.6],
+  [1.7, 0.1, 0.4],
+  [0.5, 1.8, 0.2],
 ];
 
 //                             RESULT ARRAY
@@ -20,11 +24,11 @@ var resultArray = [
 //              ʌ  +---------+------+-------+---------+
 //              |  |         | rock | paper | scissor |
 //              |  +---------+------+-------+---------+
-//              |  | rock    | 0.2  | 0     | 1       |
+//              |  | rock    | 0.0  | 0.3   | 1.6     |
 //       (User) |  +---------+------+-------+---------+
-//              |  | paper   | 1    | 0.2   | 0       |
+//              |  | paper   | 1.7  | 0.1   | 0.4     |
 //              |  +---------+------+-------+---------+
-//              |  | scissor | 0    | 1     | 0.2     |
+//              |  | scissor | 0.5  | 1.8   | 0.2     |
 //              V  +---------+------+-------+---------+
 
 const invalidInputError = selection.length;
@@ -46,7 +50,7 @@ function getResultIndex(n1: number): number {
 }
 
 function addDraw(n2: number): number {
-  return n2 === 2 ? 1 : 0;
+  return (n2 >= 0 && n2 <=2) ? 1 : 0;
 }
 
 console.table(selection);
