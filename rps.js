@@ -14,7 +14,7 @@ var resultArray = [
     [0.5, 1.8, 0.2],
 ];
 //                             RESULT ARRAY
-//      **win = 1.1, draw = 0.2, lose =0, user(rows) v computer (columns)**
+//      **win = 1.#, draw = 0.#, lose =0.#, user(rows) v computer (columns)**
 //      **integral= value added to win count, decimal=resultMsgIndex**
 //
 //                 <------------(Computer)------------>
