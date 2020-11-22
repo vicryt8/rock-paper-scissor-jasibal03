@@ -53,7 +53,7 @@ for (var i = 1; i < 11; i++) {
     var userInput = prompt("Throw Rock, Paper or Scissors");
     var playerThrowIndex = validateThrow(userInput);
     var computerThrowIndex = Math.floor(Math.random() * 3);
-    if (playerThrowIndex !== 3) {
+    if (playerThrowIndex !== invalidInputError) {
         var result = resultArray[playerThrowIndex][computerThrowIndex];
         var resultMsgIndex = getResultMsgIndex(result);
         win = win + Math.floor(result);
